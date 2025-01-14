@@ -1,0 +1,34 @@
+# Enable mod_rewrite
+RewriteEngine On
+
+# Redirect index.php to cleaner URLs (if needed)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ index.php?route=$1 [QSA,L]
+
+# Disable Directory Listing
+Options -Indexes
+
+# Custom 404 Error Page
+ErrorDocument 404 /404.php
+
+# Set Expiry Headers for Performance
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
+
+# Protect Sensitive Files
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+# Block Access to .htaccess itself
+<Files .htaccess>
+    Require all denied
+</Files>

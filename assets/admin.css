@@ -1,0 +1,22 @@
+.admin-dashboard {
+    text-align: center;
+    padding: 20px;
+}
+
+.admin-users, .admin-resumes, .admin-jobs {
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.admin-users table, .admin-resumes table, .admin-jobs table {
+    width: 100%;
+}
+
+.admin-users th, .admin-resumes th, .admin-jobs th {
+    background: #ff6600;
+}
+
+.admin-users td a, .admin-resumes td a, .admin-jobs td a {
+    text-decoration: none;
+    color: #007bff;
+}

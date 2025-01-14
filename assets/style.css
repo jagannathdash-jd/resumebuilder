@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    --bg-color-light: #f5f5f5;
+    --text-color-light: #333;
+    --header-bg-light: #007bff;
+    --header-text-light: white;
+    --button-bg-light: #28a745;
+    --button-text-light: white;
+    --table-header-light: #007bff;
+    --table-text-light: white;
+
+    --bg-color-dark: #181818;
+    --text-color-dark: #ffffff;
+    --header-bg-dark: #333;
+    --header-text-dark: #f5f5f5;
+    --button-bg-dark: #006400;
+    --button-text-dark: #ffffff;
+    --table-header-dark: #444;
+    --table-text-dark: #ffffff;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s, color 0.3s;
+}
+
+header {
+    background-color: var(--header-bg-light);
+    color: var(--header-text-light);
+    padding: 15px;
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+    margin-top: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    margin: 10px;
+    color: white;
+    padding: 10px 15px;
+    background-color: #0056b3;
+    border-radius: 5px;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background: var(--bg-color-light);
+    color: var(--text-color-light);
+    transition: background 0.3s, color 0.3s;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: var(--table-header-light);
+    color: var(--table-text-light);
+}
+
+button {
+    padding: 8px 12px;
+    border: none;
+    color: var(--button-text-light);
+    background: var(--button-bg-light);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button.delete {
+    background: #dc3545;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: var(--header-bg-light);
+    color: var(--header-text-light);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+
+header.dark-mode {
+    background-color: var(--header-bg-dark);
+    color: var(--header-text-dark);
+}
+
+section.dark-mode {
+    background: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+
+th.dark-mode {
+    background-color: var(--table-header-dark);
+    color: var(--table-text-dark);
+}
+
+button.dark-mode {
+    background: var(--button-bg-dark);
+    color: var(--button-text-dark);
+}
+
+footer.dark-mode {
+    background-color: var(--header-bg-dark);
+    color: var(--header-text-dark);
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    padding: 8px 12px;
+    background: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}

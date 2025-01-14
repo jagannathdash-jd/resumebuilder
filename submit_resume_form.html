@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Resume</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Create Your Resume</h1>
+</header>
+
+<form method="POST" action="submit_resume.php">
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="text" name="phone" placeholder="Phone" required>
+    <input type="url" name="linkedin" placeholder="LinkedIn">
+    <input type="url" name="github" placeholder="GitHub">
+    <input type="url" name="portfolio" placeholder="Portfolio">
+    <textarea name="education" placeholder="Education" required></textarea>
+    <textarea name="experience" placeholder="Experience" required></textarea>
+    <textarea name="skills" placeholder="Skills" required></textarea>
+    <input type="color" name="theme_color" value="#000000">
+    <select name="template" required>
+        <option value="template1">Template 1</option>
+        <option value="template2">Template 2</option>
+    </select>
+    <button type="submit">Save Resume</button>
+</form>
+
+<footer>
+    <p>&copy; 2025 ResumeBuilder. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
